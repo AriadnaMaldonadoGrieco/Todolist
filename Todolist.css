@@ -21,13 +21,13 @@ body{
     flex-direction: column;
     min-height: 100vh;
     background: var(--background);
-    
+    min-width: 100vw;
 }
 
 header{
     display: flex;
     justify-content: center;
-    width: 100vw;
+    min-width: 100%;
     font-size: 1rem;
     padding: 1rem 1rem;
     color: var(--headerfont);
@@ -111,15 +111,21 @@ main {
     padding: 1rem;
     border-radius: 1rem;
     margin-bottom: 1rem;
+    width: 100%;
 }
 
 
-#tasks .task .content .text  {
+#tasks .task .content  {
     color: var(--taskfont);
     font-size: 1.3rem;
     width: 100%;
     display: block;
     transition: 0.4s;
+    
+}
+
+.text {
+    width: 100%;
 }
 
 #tasks .task .content .text:not(:read-only) {
@@ -129,9 +135,11 @@ main {
 
 #tasks .task .actions {
     display: flex;
-    margin: 0 -0.5rem;
-    width: 2rem;
+    justify-content: flex-end;
+    margin-right: 2rem;
+    width: 50%;
 }
+
 
 .task .actions i {
     cursor: pointer;
