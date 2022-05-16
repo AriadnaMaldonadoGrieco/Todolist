@@ -1,0 +1,148 @@
+:root {
+    --background: #ffffff;
+    --darker: 	#7b7b86;
+    --taskfont: #353131;
+    --fonts: #a8a0a0;
+    --borders: #ebe6e6;
+    --headerfont: #EEE;
+    --backgroundheader: #5e00b8;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--background);
+    
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    font-size: 1rem;
+    padding: 1rem 1rem;
+    color: var(--headerfont);
+    margin-bottom: 1rem;
+    background-color: var(--backgroundheader) ;
+}
+
+#new-task-form {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0rem 0.2rem 0.6rem 0.1rem var(--darker); 
+    border-radius: 0.25rem;
+    margin: 0 auto;
+}
+
+input , button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+
+#new-task-input {
+    flex: 1 1 0%;
+    background-color: var(--background);
+    padding: 1rem;
+    border: 0.12rem solid var(--borders);
+    border-radius: 0.3rem;
+    margin: 1rem;
+    color: var(--fonts);
+    font-size: 1.25rem;
+}
+
+#new-task-input::placeholder {
+    color: var(--fonts);
+}
+
+#new-task-submit {
+    color: var(--headerfont);
+    font-size: 1.25rem;
+    text-align: center;
+    background-color: var(--backgroundheader);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.4s;
+    margin: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-self: center;
+    border-radius: 0.2rem;
+}
+
+#new-task-submit:hover {
+    opacity: 0.8;
+}
+
+#new-task-submit:active {
+    opacity: 0.6;
+}
+
+main {
+    flex: 1 1 0%;
+    max-width: 50rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.task-list {
+    padding: 1rem;
+}
+
+
+#tasks .task {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--background);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+#tasks .task .content .text  {
+    color: var(--taskfont);
+    font-size: 1.3rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+#tasks .task .content .text:not(:read-only) {
+    color: var(--darker);
+
+}
+
+#tasks .task .actions {
+    display: flex;
+    margin: 0 -0.5rem;
+    width: 2rem;
+}
+
+.task .actions i {
+    cursor: pointer;
+    margin: 0 0.5rem;
+}
+
+.task .actions i:hover {
+    opacity: 0.8;
+}
+
+.task .actions i:active {
+    opacity: 0.6;
+}
+
